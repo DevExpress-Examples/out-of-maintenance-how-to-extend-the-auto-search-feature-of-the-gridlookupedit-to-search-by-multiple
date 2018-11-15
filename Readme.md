@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/Q233475/Form1.cs) (VB: [Form1.vb](./VB/Q233475/Form1.vb))
+<!-- default file list end -->
 # How to extend the auto-search feature of the GridLookUpEdit to search by multiple columns
 
 
