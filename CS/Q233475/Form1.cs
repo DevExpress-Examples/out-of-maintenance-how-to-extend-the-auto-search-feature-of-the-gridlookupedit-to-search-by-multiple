@@ -51,18 +51,5 @@ namespace Q233475
                 table.Rows.Add(i, "Product " + i, random.Next(10));
             return table;
         }
-
-        private void OnRepositoryItemGridLookUpEditCloseUp(object sender, CloseUpEventArgs e)
-        {
-            if (gridView1.ActiveEditor != null)
-                ((TextEdit)gridView1.ActiveEditor).SelectAll();
-        }
-
-        private void OnRepositoryItemGridLookUpEditCustomDisplayText(object sender, CustomDisplayTextEventArgs e)
-        {
-            RepositoryItemGridLookUpEdit edit = sender as RepositoryItemGridLookUpEdit;
-            if (edit == null) edit = ((GridLookUpEdit)sender).Properties;
-            e.DisplayText = edit.View.GetRowCellValue(edit.View.LocateByValue(0, colCategoryID1, e.Value), "Total").ToString();
-        }
     }
 }

@@ -35,7 +35,7 @@ namespace Q233475
             this.colProductID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCategoryID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCategoryID1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,15 +104,13 @@ namespace Q233475
             this.repositoryItemGridLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemGridLookUpEdit1.DataSource = this.categoriesBindingSource;
-            this.repositoryItemGridLookUpEdit1.DisplayMember = "Total";
+            this.repositoryItemGridLookUpEdit1.DisplayMember = "CategoryName";
             this.repositoryItemGridLookUpEdit1.ImmediatePopup = true;
             this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
-            this.repositoryItemGridLookUpEdit1.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.repositoryItemGridLookUpEdit1.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Default;
             this.repositoryItemGridLookUpEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.repositoryItemGridLookUpEdit1.ValueMember = "CategoryID";
             this.repositoryItemGridLookUpEdit1.View = this.repositoryItemGridLookUpEdit1View;
-            this.repositoryItemGridLookUpEdit1.CustomDisplayText += new DevExpress.XtraEditors.Controls.CustomDisplayTextEventHandler(this.OnRepositoryItemGridLookUpEditCustomDisplayText);
-            this.repositoryItemGridLookUpEdit1.CloseUp += new DevExpress.XtraEditors.Controls.CloseUpEventHandler(this.OnRepositoryItemGridLookUpEditCloseUp);
             // 
             // categoriesBindingSource
             // 
@@ -136,22 +134,15 @@ namespace Q233475
             // 
             this.colCategoryID1.FieldName = "CategoryID";
             this.colCategoryID1.Name = "colCategoryID1";
-            this.colCategoryID1.OptionsColumn.ShowInCustomizationForm = false;
+            this.colCategoryID1.Visible = true;
+            this.colCategoryID1.VisibleIndex = 1;
             // 
             // colCategoryName
             // 
             this.colCategoryName.FieldName = "CategoryName";
             this.colCategoryName.Name = "colCategoryName";
-            this.colCategoryName.OptionsColumn.ShowInCustomizationForm = false;
-            // 
-            // colTotal
-            // 
-            this.colTotal.FieldName = "Total";
-            this.colTotal.Name = "colTotal";
-            this.colTotal.UnboundExpression = "Concat(\' \', ToStr([CategoryID]), \' \', [CategoryName])";
-            this.colTotal.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.colTotal.Visible = true;
-            this.colTotal.VisibleIndex = 0;
+            this.colCategoryName.Visible = true;
+            this.colCategoryName.VisibleIndex = 0;
             // 
             // Form1
             // 
@@ -180,7 +171,7 @@ namespace Q233475
         private DevExpress.XtraGrid.Columns.GridColumn colProductID;
         private DevExpress.XtraGrid.Columns.GridColumn colProductName;
         private DevExpress.XtraGrid.Columns.GridColumn colCategoryID;
-        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemGridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
         private System.Windows.Forms.BindingSource categoriesBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colCategoryID1;

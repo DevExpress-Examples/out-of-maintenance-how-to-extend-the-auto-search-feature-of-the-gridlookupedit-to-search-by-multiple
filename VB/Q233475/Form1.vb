@@ -54,15 +54,5 @@ Namespace Q233475
 
             Return table
         End Function
-
-        Private Sub OnRepositoryItemGridLookUpEditCloseUp(ByVal sender As Object, ByVal e As CloseUpEventArgs)
-            If gridView1.ActiveEditor IsNot Nothing Then CType(gridView1.ActiveEditor, TextEdit).SelectAll()
-        End Sub
-
-        Private Sub OnRepositoryItemGridLookUpEditCustomDisplayText(ByVal sender As Object, ByVal e As CustomDisplayTextEventArgs)
-            Dim edit As RepositoryItemGridLookUpEdit = TryCast(sender, RepositoryItemGridLookUpEdit)
-            If edit Is Nothing Then edit = (CType(sender, GridLookUpEdit)).Properties
-            e.DisplayText = edit.View.GetRowCellValue(edit.View.LocateByValue(0, colCategoryID1, e.Value), "Total").ToString()
-        End Sub
     End Class
 End Namespace
