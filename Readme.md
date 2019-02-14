@@ -5,9 +5,6 @@
 <!-- default file list end -->
 # How to extend the auto-search feature of the GridLookUpEdit to search by multiple columns
 
-
-<p>Starting from version 9.1.0, the GridLookUpEdit provides the capability to use the "Contains" operator as the auto-search criteria (<a href="https://www.devexpress.com/Support/Center/p/S30733">GridLookUpEdit - Add "Contains" filter mode with highlighting</a>). This example demonstrates how to extend this functionality, and use values from several columns to find a necessary record. To implement this, values from these columns are combined and displayed in the editor as a single string.</p>
-
-<br/>
-
+Starting from version 11.1, we added the [SearchLookUpEdit](https://documentation.devexpress.com/WindowsForms/DevExpress.XtraEditors.SearchLookUpEdit.class) editor that provides the capability to perform searching through all columns out of the box. Thus, it is sufficient to set the [PopupFilterMode](https://documentation.devexpress.com/WindowsForms/DevExpress.XtraEditors.PopupFilterMode.enum) property to *Default*. 
+This example demonstrates how to achieve this functionality via the editor.
 
